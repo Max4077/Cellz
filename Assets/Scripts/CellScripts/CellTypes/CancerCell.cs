@@ -4,8 +4,5 @@ using UnityEngine;
 
 public class CancerCell : CellBase
 {
-    private void Awake()
-    {
-        healthChangeAmount = -1;
-    }
+    
 }
