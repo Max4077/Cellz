@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8591258544313400435}
   - component: {fileID: 1763382384793919232}
   - component: {fileID: 7095317536299881783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HealthyCell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
