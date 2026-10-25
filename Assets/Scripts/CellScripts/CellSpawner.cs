@@ -15,7 +15,18 @@ public class CellSpawner : MonoBehaviour
     public int spawnAmount = 10;
     public float spawnDelay = 1;
 
+    /// <summary>
+    /// Check this to spawn only cancer cells for debugging
+    /// </summary>
+    public bool onlyCancerCells = false;
+    private int cancerAmount = 5;
+
     private IEnumerator spawnCells;
+
+    private void Awake()
+    {
+        if (onlyCancerCells) cancerAmount = 2;
+    }
 
     void Start()
     {
@@ -33,11 +44,24 @@ public class CellSpawner : MonoBehaviour
     }
     public void SpawnRandomCell()
     {
-        int random = Random.Range(1, 5);
+        int random = Random.Range(1, cancerAmount);
 
         if(random == 1)
         {
-            cell = (GameObject)Instantiate(Resources.Load("Cells/CancerCell"));
+            int cellType = Random .Range(0, 3);
+            switch (cellType)
+            {
+                case 0:
+                    cell = (GameObject)Instantiate(Resources.Load("Cells/CancerCellA"));
+                    break;
+                case 1:
+                    cell = (GameObject)Instantiate(Resources.Load("Cells/CancerCellB"));
+                    break;
+                case 2:
+                    cell = (GameObject)Instantiate(Resources.Load("Cells/CancerCellC"));
+                    break;
+            }
+            cell.GetComponent<CancerCell>().cellType = cellType;
         }
         else
         {
