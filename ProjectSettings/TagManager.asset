@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - CancerCell
+  - Car-T-A
+  - Car-T-B
+  - Car-T-AB
   layers:
   - Default
   - TransparentFX
