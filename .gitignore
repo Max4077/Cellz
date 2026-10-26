@@ -107,3 +107,9 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+
+# Personal editor dark mode plugin (local only, not part of the project)
+/[Aa]ssets/[Pp]lugins/UnityEditorDarkMode/
+/[Aa]ssets/[Pp]lugins/UnityEditorDarkMode.meta
+
+/[Aa]ssets/[Pp]lugins.meta
