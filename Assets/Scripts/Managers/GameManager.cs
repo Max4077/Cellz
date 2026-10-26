@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -9,6 +10,29 @@ public class GameManager : MonoBehaviour
 
     private int currentHealth;
     [SerializeField] private int maxHealth;
+
+    #region Debug
+    public CellSpawner spawner;
+    public GameObject chemoTower;
+    public GameObject immunoTower;
+
+    public void SpawnMixedCells()
+    {
+        spawner.SpawnMixedCells();
+    }
+    public void SpawnCancerCells()
+    {
+        spawner.SpawnCancerCells();
+    }
+    public void ToggleChemoTower()
+    {
+        chemoTower.SetActive(!chemoTower.activeSelf);
+    }
+    public void ToggleImmunoTower()
+    {
+        immunoTower.SetActive(!immunoTower.activeSelf);
+    }
+    #endregion Debug
 
     private void Awake()
     {

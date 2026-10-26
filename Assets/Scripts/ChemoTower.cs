@@ -39,7 +39,7 @@ public class ChemoTower : MonoBehaviour
     }
 
     // gizmo for range (only in editor)
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, range);

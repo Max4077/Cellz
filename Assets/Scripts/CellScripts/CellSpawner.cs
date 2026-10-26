@@ -30,8 +30,8 @@ public class CellSpawner : MonoBehaviour
 
     void Start()
     {
-        spawnCells = SpawnCells(spawnAmount, spawnDelay);
-        StartCoroutine(spawnCells);
+        //spawnCells = SpawnCells(spawnAmount, spawnDelay);
+        //StartCoroutine(spawnCells);
     }
 
     public IEnumerator SpawnCells(int amount, float delay)
@@ -70,5 +70,18 @@ public class CellSpawner : MonoBehaviour
 
         cell.GetComponent<CinemachineDollyCart>().m_Path = path;
         cell.GetComponent<CellBase>().SetGameManager(gameManager);
+    }
+
+    public void SpawnMixedCells()
+    {
+        cancerAmount = 5;
+        spawnCells = SpawnCells(spawnAmount, spawnDelay);
+        StartCoroutine(spawnCells);
+    }
+    public void SpawnCancerCells()
+    {
+        cancerAmount = 2;
+        spawnCells = SpawnCells(spawnAmount, spawnDelay);
+        StartCoroutine(spawnCells);
     }
 }

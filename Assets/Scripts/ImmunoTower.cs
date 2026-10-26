@@ -14,6 +14,7 @@ public class ImmunoTower : MonoBehaviour
     List<GameObject> enemies = new List<GameObject>();
 
     [SerializeField] private GameObject currentTarget;
+    public string targetEnemyType = "CancerCellA";
 
     [SerializeField] private GameObject projectilePrefab;
     void Start()
@@ -40,7 +41,7 @@ public class ImmunoTower : MonoBehaviour
 
         foreach (GameObject enemy in enemies)
         {
-            if (enemy.TryGetComponent(out CinemachineDollyCart cart) && cart.m_Position > bestPosition)
+            if (enemy.tag.Equals(targetEnemyType) && enemy.TryGetComponent(out CinemachineDollyCart cart) && cart.m_Position > bestPosition)
             {
                 bestPosition = cart.m_Position;
                 farthest = enemy;
@@ -79,5 +80,24 @@ public class ImmunoTower : MonoBehaviour
             }
         }
     }
+
+    #region Debug
+    public void ChangeTargetType(string newType)
+    {
+        targetEnemyType = newType;
+    }
+    public void TargetA()
+    {
+        ChangeTargetType("CancerCellA");
+    }
+    public void TargetB()
+    {
+        ChangeTargetType("CancerCellB");
+    }
+    public void TargetC()
+    {
+        ChangeTargetType("CancerCellC");
+    }
+    #endregion 
 }
 
