@@ -4,7 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - CancerCell
+  - CancerCellA
+  - CancerCellB
+  - CancerCellC
   layers:
   - Default
   - TransparentFX

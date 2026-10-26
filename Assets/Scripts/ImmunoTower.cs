@@ -10,6 +10,9 @@ public class ImmunoTower : MonoBehaviour
     [SerializeField] private float projectileSpeed = 30f;
     private float timeTillFire = 0f;
 
+    private string[] enemyTags = { "CancerCellA", "CancerCellB", "CancerCellC" };
+    List<GameObject> enemies = new List<GameObject>();
+
     [SerializeField] private GameObject currentTarget;
 
     [SerializeField] private GameObject projectilePrefab;
@@ -26,29 +29,25 @@ public class ImmunoTower : MonoBehaviour
 
     void TargetFinding()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("CancerCell");
+        enemies.Clear();
+        foreach (string tag in enemyTags)
+        {
+            enemies.AddRange(GameObject.FindGameObjectsWithTag(tag));
+        }
 
-        float bestPosition = 0;
-        
+        GameObject farthest = null;
+        float bestPosition = float.MinValue;
+
         foreach (GameObject enemy in enemies)
         {
-            if (enemy.GetComponent<CinemachineDollyCart>() != null)
+            if (enemy.TryGetComponent(out CinemachineDollyCart cart) && cart.m_Position > bestPosition)
             {
-                CinemachineDollyCart cart = enemy.GetComponent<CinemachineDollyCart>();
-
-                if (currentTarget == null)
-                {
-                    currentTarget = enemy;
-                }
-                else if (cart.m_Position > bestPosition)
-                {
-                    bestPosition = cart.m_Position;
-                    currentTarget = enemy;
-                }
-
-                Debug.Log("Checking Enemy: " + currentTarget.name + "Distance: " + cart.m_Position);
+                bestPosition = cart.m_Position;
+                farthest = enemy;
             }
         }
+
+        currentTarget = farthest;
     }
 
 /// <summary>

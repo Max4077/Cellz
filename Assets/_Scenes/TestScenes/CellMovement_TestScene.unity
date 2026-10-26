@@ -980,6 +980,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 161856517}
+    - target: {fileID: 497319093584807528, guid: ec6508e735a9bd74d9168f967483dc7d, type: 3}
+      propertyPath: onlyCancerCells
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 586151807990918389, guid: ec6508e735a9bd74d9168f967483dc7d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

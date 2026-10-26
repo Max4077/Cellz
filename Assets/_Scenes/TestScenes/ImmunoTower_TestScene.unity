@@ -562,6 +562,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a663b087ee3dc24ab888c2f18ce0cf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &804559819
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1040988813749584074, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_Name
+      value: Car-T Immuno Tower
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.6483455
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.2591333
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1208170657971384320, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2d5c6b68a01f4544b2d109260e792bb, type: 3}
 --- !u!1 &806920276
 GameObject:
   m_ObjectHideFlags: 0
@@ -595,6 +652,7 @@ MonoBehaviour:
   gameManager: {fileID: 161856517}
   spawnAmount: 10
   spawnDelay: 1
+  onlyCancerCells: 0
 --- !u!4 &806920278
 Transform:
   m_ObjectHideFlags: 0
@@ -1024,3 +1082,4 @@ SceneRoots:
   - {fileID: 806920278}
   - {fileID: 161856515}
   - {fileID: 1549424380}
+  - {fileID: 804559819}

@@ -34,7 +34,17 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("CancerCell"))
+        if (other.gameObject.CompareTag("CancerCellA"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("CancerCellB"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
+        if (other.gameObject.CompareTag("CancerCellC"))
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
